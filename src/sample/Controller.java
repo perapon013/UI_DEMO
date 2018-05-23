@@ -22,7 +22,7 @@ public class Controller implements Initializable {
     @FXML
     private PasswordField password;
     @FXML
-    private Button btnlogin;
+    private Button btnLogin;
     @FXML
     private Label dbStatus;
 
@@ -31,9 +31,9 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         if (this.loginModel.isDatabaseConnection()) {
-            this.dbStatus.setText("Connected to DB.");
+            this.dbStatus.setText("Database is connected.");
         } else {
-            this.dbStatus.setText("Not Connect to DB.");
+            this.dbStatus.setText("Database is not connected.");
         }
 
 
