@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminDashboard.dashBoardController">
    <children>
       <Pane prefHeight="86.0" prefWidth="800.0" style="-fx-background-color: #00e676;">
@@ -22,17 +21,17 @@
                   <Font name="Perpetua Titling MT Bold" size="22.0" />
                </font>
             </Label>
-            <Label layoutX="106.0" layoutY="28.0" text="to">
+            <Label layoutX="177.0" layoutY="20.0" text="to">
                <font>
                   <Font name="Perpetua Titling MT Bold" size="22.0" />
                </font>
             </Label>
-            <Label layoutX="138.0" layoutY="58.0" text="mit saiyai app">
+            <Label layoutX="307.0" layoutY="34.0" text="mit saiyai app">
                <font>
                   <Font name="Perpetua Titling MT Bold" size="22.0" />
                </font>
             </Label>
-            <Label layoutX="144.0" layoutY="32.0" text="(Darkside)">
+            <Label layoutX="210.0" layoutY="18.0" text="(Darkside)">
                <font>
                   <Font name="Perpetua Titling MT Bold" size="10.0" />
                </font>
@@ -92,18 +91,18 @@
             </VBox>
          </children>
       </Pane>
-      <TableView layoutX="184.0" layoutY="140.0" prefHeight="345.0" prefWidth="603.0">
+      <TableView fx:id="employeeTable" layoutX="184.0" layoutY="140.0" prefHeight="345.0" prefWidth="603.0">
         <columns>
-          <TableColumn prefWidth="36.0" text="ID" />
-          <TableColumn prefWidth="190.0" text="NAME" />
-            <TableColumn prefWidth="69.0" text="POSITION" />
-            <TableColumn prefWidth="191.0" text="E-MAIL" />
-            <TableColumn prefWidth="116.0" text="SALARY" />
+          <TableColumn fx:id="idColumn" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="190.0" text="NAME" />
+            <TableColumn fx:id="positionColumn" prefWidth="69.0" text="POSITION" />
+            <TableColumn fx:id="emailColumn" prefWidth="191.0" text="E-MAIL" />
+            <TableColumn fx:id="salaryColumn" prefWidth="116.0" text="SALARY" />
         </columns>
       </TableView>
       <JFXTextField layoutX="215.0" layoutY="101.0" prefHeight="25.0" prefWidth="266.0" />
       <FontAwesomeIconView glyphName="HAND_ALT_RIGHT" layoutX="195.0" layoutY="125.0" size="16" />
-      <JFXButton layoutX="693.0" layoutY="103.0" prefHeight="33.0" prefWidth="94.0" text="SEARCH">
+      <JFXButton fx:id="btnLoad" layoutX="693.0" layoutY="103.0" prefHeight="33.0" prefWidth="94.0" text="SEARCH">
          <graphic>
             <FontAwesomeIconView glyphName="SEARCH" />
          </graphic>
