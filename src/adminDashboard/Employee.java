@@ -1,33 +1,32 @@
 package adminDashboard;
 
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Employee {
-    private final IntegerProperty ID;
+    private final StringProperty ID;
     private final StringProperty NAME;
     private final StringProperty POSITION;
     private final StringProperty EMAIL;
-    private final DoubleProperty SALARY;
+    private final StringProperty SALARY;
 
-    public Employee(IntegerProperty ID, StringProperty NAME, StringProperty POSITION, StringProperty EMAIL, DoubleProperty SALARY) {
-        this.ID = ID;
-        this.NAME = NAME;
-        this.POSITION = POSITION;
-        this.EMAIL = EMAIL;
-        this.SALARY = SALARY;
+    public Employee(String ID, String NAME, String POSITION, String EMAIL, String SALARY) {
+        this.ID = new SimpleStringProperty(ID);
+        this.NAME = new SimpleStringProperty(NAME);
+        this.POSITION = new SimpleStringProperty(POSITION);
+        this.EMAIL = new SimpleStringProperty(EMAIL);
+        this.SALARY = new SimpleStringProperty(SALARY);
     }
 
-    public int getID() {
+    public String getID() {
         return ID.get();
     }
 
-    public IntegerProperty IDProperty() {
+    public StringProperty IDProperty() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(String ID) {
         this.ID.set(ID);
     }
 
@@ -67,15 +66,15 @@ public class Employee {
         this.EMAIL.set(EMAIL);
     }
 
-    public double getSALARY() {
+    public String getSALARY() {
         return SALARY.get();
     }
 
-    public DoubleProperty SALARYProperty() {
+    public StringProperty SALARYProperty() {
         return SALARY;
     }
 
-    public void setSALARY(double SALARY) {
+    public void setSALARY(String SALARY) {
         this.SALARY.set(SALARY);
     }
 }
